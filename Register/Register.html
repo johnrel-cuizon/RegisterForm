@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+    <div class="container" id="form-container">
+        <h2>Registration Form</h2>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" required>
+            </div>
+            <div class="form-group">
+                <label for="middlename">Middle Name</label>
+                <input type="text" id="middlename">
+            </div>
+            <div class="form-group">
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname" required>
+            </div>
+            <div class="form-group">
+                <label for="technology">Technology</label>
+                <select id="technology" required>
+          <option value="">-- Select Technology --</option>
+          <option value="COMPUTER ENGINEERING">COMPUTER ENGINEERING</option>
+          <option value="ELECTRICAL ENGINEERING">ELECTRICAL ENGINEERING</option>
+          <option value="ELECTRONICS ENGINEERING">ELECTRONICS ENGINEERING</option>
+          <option value="MECHANICAL ENGINEERING">MECHANICAL ENGINEERING</option>
+        </select>
+            </div>
+            <div class="form-group">
+                <label for="batch">Batch</label>
+                <input type="text" id="batch" required>
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact Number</label>
+                <input type="tel" id="contact" pattern="[0-9]{11}" placeholder="e.g. 09123456789" required>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <!-- Dashboard -->
+    <div class="dashboard" id="dashboard" style="display:none;">
+        <h2>Dashboard</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Middle Name</th>
+                    <th>Last Name</th>
+                    <th>Technology</th>
+                    <th>Batch</th>
+                    <th>Contact Number</th>
+                </tr>
+            </thead>
+            <tbody id="userTable"></tbody>
+        </table>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
